@@ -1,53 +1,55 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Spring Boot Thymeleaf Hello World Example</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Customers</a>
-        </div>
-    </div>
-</nav>
-<div class="container">
-    <div>
-        <h1>Customer List</h1>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>Phone Number</th>
-                <th>Order Limit</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="customer : ${customers}">
-                <td th:text="${customer.id}"></td>
-                <td th:text="${customer.firstName}"></td>
-                <td th:text="${customer.lastName}"></td>
-                <td th:text="${customer.address}"></td>
-                <td th:text="${customer.city}"></td>
-                <td th:text="${customer.phoneNumber}"></td>
-                <td th:text="${customer.orderLimit}"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Customers</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div>
+			<h1>Customer List</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Address</th>
+						<th>City</th>
+						<th>Phone Number</th>
+						<th>Order Limit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="customer : ${customers}">
+						<td th:text="${customer.id}"></td>
+						<td th:text="${customer.firstName}"></td>
+						<td th:text="${customer.lastName}"></td>
+						<td th:text="${customer.address}"></td>
+						<td th:text="${customer.city}"></td>
+						<td th:text="${customer.phoneNumber}"></td>
+						<td th:text="${customer.orderLimit}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>
